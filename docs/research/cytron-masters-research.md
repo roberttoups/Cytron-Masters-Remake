@@ -90,8 +90,8 @@ mechanics is the standard low-risk path (see §9).
 ### 3.2 Units
 
 Five buildable CYTRON types plus Command-Center-launched anti-missiles.
-Units are built at/near your Command Center ("Make" command) and paid for
-in energy. Costs and combat numbers below are from the Wargaming Scribe's
+Units are built with the MAKE command and materialize at your movable
+**Transport Beam Point** (see §3.4), paid for in energy. Costs and combat numbers below are from the Wargaming Scribe's
 modern playthrough (zeitgame.net), the most detailed rules source found;
 they should be re-verified against the manual. [single-source unless noted]
 
@@ -139,13 +139,23 @@ they should be re-verified against the manual. [single-source unless noted]
 The fiction: you are the Cytron Master inside the Command Center, and orders
 propagate from the CC to field units. [verified]
 
-- Orders are issued in real time through a small menu; sources name **four
-  main commands**, two of which are documented:
-  - **Make** — create a unit at your spawn location (the CC area).
-  - **Direct** — order a single unit: advance, retreat, move north/south,
-    halt, or **self-destruct**.
-  - The remaining two are almost certainly *group orders via Commander* and
-    *missile/anti-missile launch* — **confirm against manual.** [single-source: GameFAQs/Wikipedia summaries]
+- Orders are issued in real time through a menu. The **Main Menu has exactly
+  four options: MAKE, LOCATE, DIRECT, ORDER** — confirmed by the primary
+  source "Special Note to Atari Owners" insert (transcribed in
+  `primary-sources/atari-owners-note.md`). [verified — primary source]
+  - **MAKE** — create a unit (paid in energy). New units materialize at the
+    **Transport Beam Point** (see LOCATE).
+  - **LOCATE** — reposition the **Transport Beam**: the spawn point can be
+    moved "almost anywhere on your side of the battlefield." The spawn
+    location is therefore a relocatable strategic asset, not fixed at the
+    Command Center. Left player's Beam Point is blue; right player's is
+    orange/green. [verified — primary source]
+  - **DIRECT** — order a single unit via a cursor (you can hover enemy units
+    but not command them). Sub-menu: **four arrows (up/down/left/right),
+    "halt", and "destruct"** (self-destruct). [verified — primary source]
+  - **ORDER** — command through a Commander: the cursor auto-snaps to one of
+    your Commanders and cycles between them. **A player may have at most
+    three Commanders at once.** [verified — primary source]
 - **Movement deltas (critical design quirk):** an individually-ordered unit
   moves **exactly 5 spaces** then halts; a unit ordered through a Commander
   moves **10 spaces**. There is no free destination selection. The Commander
@@ -172,7 +182,15 @@ propagate from the CC to field units. [verified]
   A keyboard shortcut path exists and "it is faster to select a unit with
   the keyboard than with the joystick." [single-source: zeitgame.net]
 - **Apple II:** game paddles (Bunten: Apple's "goofy little knobs") and/or
-  keyboard. [verified: CGW + MobyGames paddle listing]
+  keyboard; the manual has "lengthy instructions" for paddle-guided
+  missiles. [verified: CGW + MobyGames + Atari insert]
+- **Atari console keys:** OPTION = difficulty level, SELECT = 1-player vs
+  2-player, START = begin/restart. Two-player: left player joystick port #1,
+  right player port #2; port #2 is used when playing the computer (implying
+  the human takes the right side vs the AI — verify in emulator).
+  [verified — primary source]
+- **Missiles and anti-missiles are manually steered in flight** (joystick on
+  Atari, paddles on Apple). [verified — primary source]
 - Two-player mode takes **simultaneous input from both players on one
   machine**. [verified: CGW designer notes]
 
@@ -184,8 +202,15 @@ propagate from the CC to field units. [verified]
   and display "apparently at once." [verified]
 - **Three speed levels**, added so players could learn the game — these are
   **distinct from** the three AI difficulty levels. [verified: Wikipedia +
-  zeitgame; flagged as easily-conflated]
-- **No pause feature documented** in any source. [open question]
+  zeitgame; flagged as easily-conflated] (Note: the Atari insert's OPTION
+  key selects "difficulty levels" named Novice/Master/Grand Master; whether
+  speed is a separate Atari setting or an Apple-only option needs emulator
+  verification.)
+- **Pause confirmed (Atari):** "At any time during the match, you may pause
+  the action by pressing the 'space' bar... Pressing the 'space' bar again
+  will resume the game exactly where you left off." While paused,
+  OPTION/SELECT/START can restart or reconfigure the game.
+  [verified — primary source]
 - **Interactive tutorial** included — claimed as one of the first interactive
   tutorials in a computer game — plus a dedicated **missile/anti-missile
   practice scenario**. [verified: Wikipedia/MobyGames]
@@ -232,6 +257,10 @@ CGDA Lifetime Achievement Award. Career arc into this game: [verified]
 ### 4.2 The team and the proto-Ozark question
 
 - Manual credit: "Dan Bunten, Jim Rushing and Alan Watson." [verified]
+- Atari version credits (from the boxed "Special Note to Atari Owners"
+  insert): Game Design: Dan Bunten; Program: Dan Bunten, Jim Rushing and
+  Alan Watson; Special Effects: Jim Rushing and Alan Watson.
+  [verified — primary source]
 - Halcyon Days interview (Bunten's only direct comment found): "The next
   game I did was 'Cytron Masters,' and we added another programmer to help
   with the graphics and the Atari port." That programmer was **Alan Watson**.
@@ -376,7 +405,7 @@ unconfirmed*. [unverified]
 
 | Resource | URL |
 |---|---|
-| **Manual + Bunten's Programmer's Notes** (scans + OCR text/EPUB; the Programmer's Notes PDF is ~20 MB and is the single most valuable remake source — the designer's own design/implementation notes) | https://archive.org/details/CytronMastersStrategicSimulations (downloads: https://archive.org/download/CytronMastersStrategicSimulations/) |
+| **Manual + "Programmer's Notes"** (scans + OCR text/EPUB). **Correction (2026-06-11):** the ~20 MB `Cytron_Masters_SSI_Programmers_Notes.pdf` is *not* a programmer's document — it is the 2-page **"Special Note to Atari Owners"** insert by Dan Bunten, scanned at very high resolution. It has been obtained and fully transcribed in `primary-sources/atari-owners-note.md`. The **Game Manual** scan in the same item remains the outstanding source for unit costs and energy numbers (it covers "Symbolic Warcraft," unit types, and troop management per the insert). | https://archive.org/details/CytronMastersStrategicSimulations (downloads: https://archive.org/download/CytronMastersStrategicSimulations/) |
 | Manual mirror (login-walled) | https://www.scribd.com/document/529723010/Cytron-Masters |
 | Bunten's own CGW article on the Atari port (full text) | https://vgpavilion.com/mags/1982/11/cgw/cytron-masters-for-atari/ |
 | CGW review issue PDF (Vol 2.5) | https://cgwmuseum.org/galleries/issues/cgw_2.5.pdf |
@@ -535,25 +564,39 @@ not among them** and is not sold anywhere.
 
 ## 11. Open questions (answerable from the manual / Programmer's Notes / play)
 
+Resolved 2026-06-11 from the "Special Note to Atari Owners" insert
+(`primary-sources/atari-owners-note.md`):
+
+- ~~Names/functions of all four main commands~~ → **MAKE, LOCATE, DIRECT,
+  ORDER**; LOCATE moves the Transport Beam spawn point; DIRECT sub-menu is
+  4 arrows + halt + destruct; ORDER cycles through up to **3 Commanders**.
+- ~~Pause feature?~~ → **Yes (Atari): space bar pauses/resumes**; while
+  paused, OPTION/SELECT/START reconfigure/restart. (Apple II pause still
+  unconfirmed.)
+
+Still open:
+
 | # | Question | Best source |
 |---|---|---|
 | 1 | Anti-missile energy cost | Manual |
-| 2 | Starting energy, energy cap, per-move/per-shot energy costs | Manual / Programmer's Notes |
+| 2 | Starting energy, energy cap, per-move/per-shot energy costs | Manual |
 | 3 | Exact power-center coordinates; layout variation by level | Manual + emulator play |
 | 4 | Command Center durability — mine-contact instant win only, or can shooters/missiles damage it? | Manual |
-| 5 | Names/functions of all four main commands | Manual |
-| 6 | Pause feature? | Manual / play |
-| 7 | Exact stationary-defense modifier (−20pp vs ×0.8 — sources ambiguous) | Manual / Programmer's Notes |
-| 8 | Missile blast radius (1-space radius vs "up to 4 units") | Manual / play |
-| 9 | Apple II memory requirement (48K presumed) | Box/manual scans |
-| 10 | $39.95 price confirmation | Period CGW ads (cgwmuseum PDFs) |
-| 11 | Contents of the Atari "prologue" variant | Emulator play |
-| 12 | Who actually holds the rights (Ubisoft vs Bunten estate) | SNEG / Bunten family / The Strong's contract papers |
+| 5 | Exact stationary-defense modifier (−20pp vs ×0.8 — sources ambiguous) | Manual / play |
+| 6 | Missile blast radius (1-space radius vs "up to 4 units") | Manual / play |
+| 7 | Apple II memory requirement (48K presumed) | Box/manual scans |
+| 8 | $39.95 price confirmation | Period CGW ads (cgwmuseum PDFs) |
+| 9 | Contents of the Atari "prologue" variant | Emulator play |
+| 10 | Apple II pause; "three speed levels" vs Atari difficulty levels — how the options differ per platform | Manual + emulator play |
+| 11 | Transport Beam placement limits ("almost anywhere on your side") and whether MAKE is interruptible | Manual + play |
+| 12 | Commander order radius vs the insert (manual says 3 spaces) and 5/10-space movement verification | Manual + play |
+| 13 | Who actually holds the rights (Ubisoft vs Bunten estate) | SNEG / Bunten family / The Strong's contract papers |
 
-**Recommended next step:** from an unrestricted network, download the
-archive.org manual + Programmer's Notes OCR text and the 4am-cracked disk,
-and extract the exact rule constants into a `docs/research/rules-spec.md`.
-This session's environment blocked all of those hosts.
+**Recommended next step:** obtain the **Game Manual** scan from the same
+archive.org item (this environment's network blocks archive.org — upload it
+to the session the same way as the insert) and extract the exact rule
+constants into a `docs/research/rules-spec.md`. The 4am-cracked Apple II
+disk is the ground truth for anything the manual leaves ambiguous.
 
 ---
 
